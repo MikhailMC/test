@@ -30,7 +30,7 @@ class CategoriesController extends Controller
         $list = $list
             ->get();
 
-        return response()->json($list->toArray());
+        return response()->json($list);
     }
 
     /**
@@ -49,7 +49,7 @@ class CategoriesController extends Controller
             'name' => $validated['name']
         ]);
 
-        return response()->json($category->toArray());
+        return response()->json($category);
     }
 
     /**
@@ -73,7 +73,7 @@ class CategoriesController extends Controller
         $category->name = $validated['name'];
         $category->save();
 
-        return response()->json($category->toArray());
+        return response()->json($category);
     }
 
     /**

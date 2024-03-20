@@ -30,7 +30,7 @@ class PostsController extends Controller
         $list = $list
             ->get();
 
-        return response()->json($list->toArray());
+        return response()->json($list);
     }
 
     /**
@@ -51,7 +51,7 @@ class PostsController extends Controller
             'description' => $validated['description']
         ]);
 
-        return response()->json($post->toArray());
+        return response()->json($post);
     }
 
     /**
@@ -77,7 +77,7 @@ class PostsController extends Controller
         $post->description = $validated['description'];
         $post->save();
 
-        return response()->json($post->toArray());
+        return response()->json($post);
     }
 
     /**
